@@ -1,0 +1,41 @@
+spring:
+  data:
+    mongodb:
+      host: 124.223.50.19
+      database: fengfengzi
+      port: 27017
+      username: fengfengzi
+      password: h1781117450
+  servlet:
+    multipart:
+      max-file-size: 10MB # 单个文件最大
+      max-request-size: 100MB # 总上传数据最大
+      enabled: true # 是否启用
+#  resources:
+#    static-locations: classpath:/static/, classpath:/static/file/, classpath:/templates/
+
+  #resources:
+    #static-locations:
+    #classpath:/META-INF/resources/,
+    #classpath:/resources/,
+    #classpath:/static/,
+    #classpath:/public/,
+    #classpath:/templates/,
+
+server:
+  port: 8080
+  servlet:
+    websocket:
+      path: /websocket
+      enabled: true
+
+
+#socketio:
+#  port: 9999
+#  workCount: 100
+#  allowCustomRequests: true
+#  upgradeTimeout: 10000
+#  pingTimeout: 60000
+#  pingInterval: 25000
+#  maxHttpContentLength: 1048576
+#  maxFramePayloadLength: 1048576
