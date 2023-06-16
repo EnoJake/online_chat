@@ -282,7 +282,7 @@ public class FriendService {
 
 
         map.put("code", code);
-        map.put("mag", msg);
+        map.put("msg", msg);
 
         return map;
     }
@@ -294,6 +294,7 @@ public class FriendService {
 
         Info sender = infoDao.findInfoByUsername(send);
         Info receiver = infoDao.findInfoByUsername(receive);
+        if (receiver == null) msg = "对方账号不存在！";
         if (receiver != null && sender != null) {
             System.out.println("都是活人");
 
@@ -377,7 +378,7 @@ public class FriendService {
         }
 
         map.put("code", code);
-        map.put("mag", msg);
+        map.put("msg", msg);
 
         return map;
     }
@@ -424,7 +425,7 @@ public class FriendService {
         }
 
         map.put("code", code);
-        map.put("mag", msg);
+        map.put("msg", msg);
 
         return map;
     }
@@ -470,7 +471,7 @@ public class FriendService {
         }
 
         map.put("code", code);
-        map.put("mag", msg);
+        map.put("msg", msg);
 
         return map;
     }
@@ -539,7 +540,7 @@ public class FriendService {
         }
 
         map.put("code", code);
-        map.put("mag", msg);
+        map.put("msg", msg);
 
         return map;
     }

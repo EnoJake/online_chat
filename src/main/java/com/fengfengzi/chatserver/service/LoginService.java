@@ -91,6 +91,13 @@ public class LoginService {
             user.setUsername(rVo.getUsername());
             user.setNickname(rVo.getUsername());
             user.setPassword(rVo.getPassword());
+            // =====这里加上随机头像=====
+            int num = (int)(Math.random() * 22) + 1;
+            String strNum = Integer.toString(num);
+            String image = "http://124.223.50.19:8080/face/face" + strNum + ".jpg";
+            user.setAvatar(image);
+
+            // =====
             user.setSex(2);
             user.setId(user_id);
 
